@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars</title>
+    <style>
+        body {
+            background-color: black;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 50px;
+        }
+        
+        .main-image {
+            width: 50%;
+            margin: 20px 0;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 18px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h1, h2, h3 {
+            text-align: left;
+            color: yellow;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .resume {
+            width: 80%;
+            text-align: center;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Star Wars</h1>
+    <img src="./images/star-wars-logo.png" alt="Logo Star Wars" class="main-image" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png'">
+    
+    <div class="resume">
+        <p>Star Wars est une saga épique de science-fiction créée par George Lucas qui suit la lutte entre les Jedi, gardiens de la paix utilisant le Côté Lumineux de la Force, et les Sith, leurs ennemis jurés qui exploitent le Côté Obscur. À travers trois trilogies, nous suivons l'histoire de la famille Skywalker et leur impact sur le destin de la galaxie, des guerres des clones à la chute de l'Empire, en passant par l'ascension du Premier Ordre.</p>
+    </div>
+
+    <nav class="nav-links">
+        <a href="#personnages" onclick="afficherSection('personnages')">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/Anakin-Skywalker_d3330724.jpeg" alt="Anakin Skywalker" class="nav-image">
+            Personnages Importants
+        </a>
+        <a href="#films" onclick="afficherSection('films')">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/star-wars-characters-main_11a8b464.jpeg" alt="Personnages Star Wars" class="nav-image" onerror="this.src='https://lumiere-a.akamaihd.net/v1/images/sw-films-bg_61b39730.jpeg'">
+            Tous les Films
+        </a>
+        <a href="#auteur" onclick="afficherSection('auteur')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/George_Lucas_cropped_2009.jpg" alt="George Lucas" class="nav-image">
+            L'Auteur et sa Biographie
+        </a>
+    </nav>
+
+    <div id="personnages" style="display: none;">
+        <h1>Personnages de Star Wars</h1>
+        
+        <div class="personnage">
+            <h2>Personnages Principaux</h2>
+            <ul>
+                <li>Luke Skywalker - Le héros Jedi qui passe de simple fermier à dernier espoir de la galaxie</li>
+                <li>Princesse Leia - Leader charismatique de la Résistance et sœur jumelle de Luke</li>
+                <li>Han Solo - Contrebandier cynique devenu héros de la Rébellion</li>
+                <li>Dark Vador/Anakin Skywalker - Le tragique héros déchu devenu seigneur Sith</li>
+                <li>Rey - Pilleuse d'épaves devenue dernière Jedi</li>
+                <li>Kylo Ren - Fils de Han et Leia, tourmenté par l'héritage de Vador</li>
+            </ul>
+        </div>
+        
+        <div class="personnage">
+            <h2>Personnages Secondaires Importants</h2>
+            <ul>
+                <li>Obi-Wan Kenobi - Le sage maître Jedi qui a formé Anakin puis Luke</li>
+                <li>Yoda - Le légendaire maître Jedi âgé de 900 ans</li>
+                <li>Chewbacca - Le loyal Wookiee, meilleur ami de Han Solo</li>
+                <li>R2-D2 et C-3PO - Les droïdes inséparables témoins de toute la saga</li>
+                <li>Padmé Amidala - Reine puis sénatrice, mère de Luke et Leia</li>
+                <li>Empereur Palpatine - Le machiavélique Seigneur Sith qui a orchestré la chute de la République</li>
+                <li>Finn - Ancien Stormtrooper devenu héros de la Résistance</li>
+                <li>Poe Dameron - Le meilleur pilote de la Résistance</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="films" style="display: none;">
+        <h1>Films Star Wars</h1>
+        
+        <div class="film">
+            <h2>Prélogie</h2>
+            <h3>Épisode I : La Menace Fantôme (1999)</h3>
+            <p>Le maître Jedi Qui-Gon Jinn et son apprenti Obi-Wan Kenobi découvrent un jeune esclave nommé Anakin Skywalker, exceptionnellement doué dans la Force. Pendant ce temps, la mystérieuse résurgence des Sith menace la République. Le film introduit les origines du futur Dark Vador et les manipulations politiques de Palpatine.</p>
+            
+            <h3>Épisode II : L'Attaque des Clones (2002)</h3>
+            <p>Dix ans plus tard, alors que la galaxie est au bord de la guerre civile, Anakin, maintenant Padawan d'Obi-Wan, protège la sénatrice Padmé Amidala. Leur histoire d'amour interdite se développe pendant que la République crée une armée de clones pour contrer la menace séparatiste.</p>
+            
+            <h3>Épisode III : La Revanche des Sith (2005)</h3>
+            <p>La transformation d'Anakin en Dark Vador s'achève alors que la République s'effondre. Manipulé par Palpatine et tourmenté par ses visions, Anakin bascule du côté obscur, détruisant l'Ordre Jedi et établissant l'Empire Galactique.</p>
+        </div>
+        
+        <div class="film">
+            <h2>Trilogie Originale</h2>
+            <h3>Épisode IV : Un Nouvel Espoir (1977)</h3>
+            <p>Luke Skywalker découvre son héritage Jedi lorsqu'il rencontre Obi-Wan Kenobi. Avec l'aide du contrebandier Han Solo et de la Princesse Leia, il rejoint la Rébellion pour détruire l'Étoile de la Mort, l'arme ultime de l'Empire. Le film révolutionne le cinéma avec ses effets spéciaux et établit les bases d'un univers mythique.</p>
+            
+            <h3>Épisode V : L'Empire Contre-Attaque (1980)</h3>
+            <p>Dans ce chapitre plus sombre, Luke poursuit sa formation Jedi avec Maître Yoda pendant que ses amis sont traqués par Dark Vador. Le film culmine avec l'une des plus grandes révélations de l'histoire du cinéma et approfondit considérablement l'univers Star Wars.</p>
+            
+            <h3>Épisode VI : Le Retour du Jedi (1983)</h3>
+            <p>La conclusion épique de la trilogie originale voit Luke tenter de sauver son père pendant que la Rébellion lance son assaut final contre l'Empire. Le film explore la rédemption, le pouvoir de l'amour familial et conclut magistralement la saga Skywalker originale.</p>
+        </div>
+        
+        <div class="film">
+            <h2>Nouvelle Trilogie</h2>
+            <h3>Épisode VII : Le Réveil de la Force (2015)</h3>
+            <p>Une nouvelle génération de héros émerge 30 ans après la chute de l'Empire. Rey, Finn et Poe doivent faire face au Premier Ordre et à Kylo Ren, pendant que la recherche de Luke Skywalker devient cruciale pour la survie de la galaxie.</p>
+            
+            <h3>Épisode VIII : Les Derniers Jedi (2017)</h3>
+            <p>Rey développe ses pouvoirs sous la tutelle réticente de Luke Skywalker, pendant que la Résistance lutte pour sa survie face au Premier Ordre. Le film remet en question de nombreux aspects établis de la mythologie Star Wars.</p>
+            
+            <h3>Épisode IX : L'Ascension de Skywalker (2019)</h3>
+            <p>La conclusion de la saga Skywalker voit le retour surprise de l'Empereur Palpatine. Rey découvre ses véritables origines pendant que la galaxie se prépare pour une ultime bataille entre les Jedi et les Sith.</p>
+        </div>
+    </div>
+
+    <div id="auteur" style="display: none;">
+        <h1>George Lucas</h1>
+        
+        <div class="auteur">
+            <h2>Biographie Détaillée</h2>
+            <p>George Lucas est né le 14 mai 1944 à Modesto, Californie. Passionné de courses automobiles dans sa jeunesse, un grave accident le pousse à reconsidérer sa voie. Il découvre alors sa passion pour la photographie et le cinéma expérimental à l'université de Californie du Sud.</p>
+            
+            <p>Après ses études, il réalise THX 1138 (1971), un film de science-fiction dystopique, puis American Graffiti (1973), qui connaît un grand succès et lui donne la crédibilité nécessaire pour lancer son projet le plus ambitieux : Star Wars.</p>
+            
+            <h2>La Genèse de Star Wars</h2>
+            <p>L'idée de Star Wars est née de multiples influences : les films de samouraïs d'Akira Kurosawa, les séries de science-fiction comme Flash Gordon, les westerns classiques, et les théories du mythologiste Joseph Campbell sur le voyage du héros. Lucas voulait créer un conte de fées moderne qui transmettrait des valeurs morales importantes aux jeunes générations.</p>
+            
+            <p>Le développement de Star Wars fut un parcours difficile. De nombreux studios ont rejeté le projet, le considérant trop risqué. La 20th Century Fox a finalement accepté, mais peu croyaient en son succès. Lucas a même renoncé à une partie de son salaire en échange des droits merchandising, une décision qui s'est révélée extrêmement lucrative.</p>
+            
+            <h2>Révolution Technologique</h2>
+            <p>Pour réaliser sa vision, Lucas a dû inventer de nouvelles technologies. Il a créé Industrial Light & Magic (ILM) pour les effets spéciaux, Skywalker Sound pour le son, et plus tard THX pour améliorer la qualité audio dans les cinémas. Ces innovations ont révolutionné l'industrie cinématographique.</p>
+            
+            <h2>Héritage</h2>
+            <p>En 2012, Lucas a vendu Lucasfilm à Disney pour 4 milliards de dollars, permettant à Star Wars de continuer sous une nouvelle direction. Il a consacré une grande partie de cette somme à l'éducation, démontrant son engagement constant pour l'apprentissage et le développement des jeunes générations.</p>
+        </div>
+    </div>
+
+    <script>
+        function afficherSection(section) {
+            document.getElementById('personnages').style.display = 'none';
+            document.getElementById('films').style.display = 'none';
+            document.getElementById('auteur').style.display = 'none';
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
